@@ -3,35 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
+    <title>메인 페이지</title>
     <script>
-        document.addEventListener("DOMContentLoaded", () =>{
+        document.addEventListener("DOMContentLoaded", () => {
             let $back = document.getElementById('back')
 
-            //뒤로가기
+            // 뒤로가기
             $back.addEventListener('click', () => {
-                 history.back()    
+                history.back()
             })
         })
     </script>
 </head>
 <body>
-    <div class="swrp">
-      <div class="container">
-         <header>
-            <h1>제목</h1>
-            <nav>
-                <ul>
-                    <li>메뉴1</li>
-                    <li>메뉴1</li>
-                    <li>메뉴1</li>
-                    <li>메뉴1</li>
-                </ul>
-            </nav>
-         </header>
-               <section> 
-               </section>
-            </div>     
-    </div>
+    <h1>메인 페이지</h1>
+    <button id="back">뒤로가기</button>
 </body>
 </html>

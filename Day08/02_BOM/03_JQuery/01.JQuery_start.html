@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuety 준비하기</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!--
+
+        CDN Content Delivery Network
+        :컨텐츠를 빠르게 다운 받을 수 있도록 해주는 분산된 서버
+
+    -->
+    <!--CDN 방식으로 포함하기-->
+    <script src ="https://code.jquery.com/jquery-3.7.1min.js"></script>
+    <script>
+        // 자바스크립트로 문서준비 이벤트 할때엔
+        document.addEventListener("DOMContentLoaded",()=>{  })
+
+    // 근데 제이쿼리 문서 준비 이벤트는
+    // 1.첫번째
+    $(document).ready(function() {
+        alert('Hello JQuery')
+    })
+    
+    //2.두번째 더 축약형 
+    $(function() {
+            alert('Hello jQuery~!')
+            $('h1').text('Heello JQuery~!')
+        })
+    </script>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+</body>
+</html>

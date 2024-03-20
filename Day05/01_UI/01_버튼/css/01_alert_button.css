@@ -1,0 +1,46 @@
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.btn{
+    border: none;
+    padding: 14px 28px;
+    cursor:pointer;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.success{ background-color: yellow;color: black;}
+.success:hover{ background-color: rgb(182, 182, 5);color: black;}
+.success:active{ background-color: rgb(96, 96, 2);color: black;}
+
+.info{ background-color: blue;}
+.info:hover{ background-color: rgb(6, 6, 174);}
+.info:active{ background-color: rgb(3, 3, 80);}
+
+.warning{background-color: red;}
+.warning:hover{background-color: rgb(165, 2, 2);}
+.warning:active{background-color: rgb(77, 2, 2);}
+
+.danger{background-color: black;}
+.danger:hover{background-color: rgb(92, 91, 91);}
+.danger:active{background-color: rgb(190, 189, 189);}
+
+.default{background-color: orange;}
+.default:hover{background-color: rgb(183, 120, 5);}
+.default:active{background-color: rgb(92, 61, 4);}
+
+ 
+.btn.lg{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 2%;
+}

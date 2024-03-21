@@ -9,8 +9,12 @@ public class Bank {
         totalAccount = 0;
     }
 
+
+        //accountNumber 계좌번호 accountNumber 예금주 balance 최초 예금액 password 비번
+
     public void createAccount() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("계좌번호>> ");
         String accountNumber = scanner.nextLine();
         System.out.print("예금주>> ");
@@ -39,7 +43,7 @@ public class Bank {
                 return;
             }
         }
-        System.out.println("해당 계좌번호를 찾을 수 없습니다.");
+        System.err.println("해당 계좌번호를 찾을 수 없습니다.");
     }
 
     public void withdraw() {
@@ -56,12 +60,12 @@ public class Bank {
                 if (accounts[i].withdraw(amount, password)) {
                     System.out.println("'" + accounts[i].getAccountHolder() + "' 님의 계좌에 " + amount + " 원이 출금되었습니다.");
                 } else {
-                    System.out.println("비밀번호가 다릅니다!");
+                    System.err.println("비밀번호가 다릅니당!");
                 }
                 return;
             }
         }
-        System.out.println("해당 계좌번호를 찾을 수 없습니다.");
+        System.err.println("해당 꼐좌번호를 찾을 수 없습니다.");
     }
 
     public void inquire() {
@@ -86,7 +90,7 @@ public class Bank {
         String adminPassword = scanner.nextLine();
 
         if (!adminPassword.equals("1111")) {
-            System.out.println("비밀번호가 다릅니다!");
+            System.err.println("비밀번호가ㅣ 다릅니다!");
             return;
         }
 

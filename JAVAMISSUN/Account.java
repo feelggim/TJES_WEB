@@ -2,16 +2,16 @@ public class Account {
     private String accountNumber;
     private String accountHolder;
     private int balance;
-    private String password;
+    private int password;
 
     public Account() {
         this.accountNumber = "계좌없음";
         this.accountHolder = "이름없음";
         this.balance = 0;
-        this.password = "";
+        this.password = 0;
     }
 
-    public Account(String accountNumber, String accountHolder, int balance, String password) {
+    public Account(String accountNumber, String accountHolder, int balance, int password) {
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.balance = balance;
@@ -42,11 +42,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getPassword() {
+    public int getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(int password) {
         this.password = password;
     }
 
@@ -56,8 +56,11 @@ public class Account {
         }
     }
 
-    public boolean withdraw(int amount, String password) {
-        if (amount <= 1000000 && password.equals(this.password)) {
+    public boolean withdraw(int amount, int password) {
+        if (amount <= 1000000 && password == (this.password))
+            
+        
+        {
             this.balance -= amount;
             return true;
         }

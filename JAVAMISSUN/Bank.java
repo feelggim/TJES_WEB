@@ -21,8 +21,10 @@ public class Bank {
         String accountHolder = scanner.nextLine();
         System.out.print("최초예금액>> ");
         int balance = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("비밀번호>> ");
-        String password = scanner.nextLine();
+        int password = scanner.nextInt();
+        scanner.nextLine();
 
         accounts[totalAccount] = new Account(accountNumber, accountHolder, balance, password);
         totalAccount++;
@@ -51,13 +53,13 @@ public class Bank {
         System.out.print("계좌번호>> ");
         String accountNumber = scanner.nextLine();
         System.out.print("비밀번호>> ");
-        String password = scanner.nextLine();
+        int password = scanner.nextInt();
         System.out.print("출금액>> ");
         int amount = scanner.nextInt();
 
         for (int i = 0; i < totalAccount; i++) {
             if (accounts[i].getAccountNumber().equals(accountNumber)) {
-                if (accounts[i].withdraw(amount, password)) {
+                if (accounts[i].getPassword() == password) {
                     System.out.println("'" + accounts[i].getAccountHolder() + "' 님의 계좌에 " + amount + " 원이 출금되었습니다.");
                 } else {
                     System.err.println("비밀번호가 다릅니당!");
@@ -73,10 +75,10 @@ public class Bank {
         System.out.print("계좌번호>> ");
         String accountNumber = scanner.nextLine();
         System.out.print("비밀번호>> ");
-        String password = scanner.nextLine();
+        int password = scanner.nextInt();
 
         for (int i = 0; i < totalAccount; i++) {
-            if (accounts[i].getAccountNumber().equals(accountNumber) && accounts[i].getPassword().equals(password)) {
+            if (accounts[i].getAccountNumber().equals(accountNumber) && accounts[i].getPassword()== (password)) {
                 System.out.println("'" + accounts[i].getAccountHolder() + "' 님의 계좌잔액은 " + accounts[i].getBalance() + " 원 입니다.");
                 return;
             }
